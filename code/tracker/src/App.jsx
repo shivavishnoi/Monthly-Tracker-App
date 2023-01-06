@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 class App extends React.Component {
@@ -73,9 +73,8 @@ class App extends React.Component {
   };
   handleCloseTask = (i) => {
     this.setState((prevState) => {
-      prevState.activities.splice(i, 1);
       return {
-        activities: prevState.activities,
+        activities: prevState.activities.filter((elm, z) => z != i),
       };
     });
   };

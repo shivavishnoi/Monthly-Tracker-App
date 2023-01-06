@@ -1,4 +1,4 @@
-var m_names = [
+const monthNames = [
   'January',
   'February',
   'March',
@@ -13,8 +13,8 @@ var m_names = [
   'December',
 ];
 
-var d = new Date();
-var month = m_names[d.getMonth()];
+const d = new Date();
+let month = monthNames[d.getMonth()];
 
 function Main(props) {
   let activities = props.activities;
